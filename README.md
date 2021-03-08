@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# React Frontend for Simple YouTube Subscriper API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple React frontend to this [API](https://github.com/joelpotts/SimpleYoutubeSubscriber) I created to manage YouTube subscriptions.
+
+## Project Goals
+
+- Practice and re-enforce my understanding of the basics of React
+- Practice and learn to use async/await
 
 ## Available Scripts
 
