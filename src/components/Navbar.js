@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {NotificationManager} from 'react-notifications';
 
+import {NavLink} from 'react-router-dom'
+
 function Navbar(props) {
     // Create state for username and password
     const [username, setUsername] = useState("");
@@ -73,8 +75,10 @@ function Navbar(props) {
 
                 <div id="navbar-menu" className="collapse navbar-collapse">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active"><a href="#" className="nav-link">My Feed</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link">Manage Subscriptions</a></li>
+                        <NavLink className="nav-item nav-link" activeClassName="active" to="/" exact >My Feed</NavLink>
+                        {props.token &&
+                            <NavLink className="nav-item nav-link" activeClassName="active" to="/subscriptions">My Subscriptions</NavLink>
+                        }
                     </ul>
                     <ul className="navbar-nav mr-right">
                         {props.token
